@@ -1,0 +1,471 @@
+!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>活動優惠</title>
+        <style>
+            .logo
+            {
+                border: 2px solid #665544;
+                width: 200px;
+                height: 100px;
+                float: left;
+                margin-top: 30px;
+                margin-left: 60px;
+            }
+            
+            .ActivityPromotion
+            {
+                font-size: 48px;
+                font-weight:bolder;
+            }
+                        
+            .membershopsearch
+            {
+                border: 2px solid #665544;
+                width: 250px;
+                height: 100px;
+                position: absolute;
+                margin-top: -90px;
+                margin-left: 1200px;
+            }
+             .signin
+            {
+                border: 2px solid #665544;
+                width: 218px;
+                height: 28px;
+                margin-top: 15px;
+                margin-left: 15px;
+                text-align-last: center
+            }
+            .register
+            {
+                border: 2px solid #665544;
+                width: 218px;
+                height: 28px;
+                margin-top: 15px;
+                margin-left: 15px;
+                text-align-last: center
+            }
+            
+            .centerlong/*中間一條*/
+            {
+                border: 2px solid #665544;
+                width: 1390px;
+                height: 50px;
+                float: left;
+                margin-top: 40px;
+                margin-left: 15px;
+                word-spacing: 200px;
+            }
+            .product /*商品*/
+            {
+                border: 2px solid #665544;
+                width: 180px;
+                height: 470px;
+                margin-top:190px;
+                margin-left:30px;
+                text-align-last: center
+            }
+            .a1
+            {
+                border: 2px solid #665544;
+                border-radius: 12px;
+                width: 120px;
+                height: 50px;
+                margin-top:65px;
+                margin-left:28px; 
+                text-align-last: center
+            }
+            .a2
+            {
+                border: 2px solid #665544;
+                border-radius: 12px;
+                width: 120px;
+                height: 50px;
+                margin-top:25px;
+                margin-left:28px; 
+                text-align-last: center
+            }
+            .a3
+            {
+                border: 2px solid #665544;
+                border-radius: 12px;
+                width: 120px;
+                height: 50px;
+                margin-top:25px;
+                margin-left:28px; 
+            }
+             .a4
+            {
+                border: 2px solid #665544;
+                border-radius: 12px;
+                width: 120px;
+                height: 50px;
+                margin-top:25px;
+                margin-left:28px; 
+                text-align-last: center
+            }
+             .a5
+            {
+                border: 2px solid #665544;
+                border-radius: 12px;
+                width: 120px;
+                height: 50px;
+                margin-top:25px;
+                margin-left:28px; 
+                text-align-last: center
+            }
+            
+            
+           #tab
+            {
+                 width: 1000px;
+                 background: #1caa5d;
+                 border: solid 1px #1caa5d;
+                 margin-top:-475px;
+                 margin-left:300px; 
+            }
+/* 頁籤ul */  #tab>ul
+            {
+                 overflow: hidden;
+                 margin: 0;
+                 padding: 10px 20px 0 20px;
+            }
+            #tab>ul>li
+            {
+                list-style-type: none;
+            }
+            #tab>ul>li>a
+            {
+                text-decoration: none;
+                font-size: 25px;
+                color: #333;
+                float: left;
+                padding: 10px 40px;
+                margin-left: 5px;
+            }
+ 
+/*頁籤div內容*/#tab>div 
+            {
+              clear:both;
+              padding:0 20px;
+              height:0;
+              overflow:hidden;
+              visibility:hidden;
+              /*-webkit-transition:all .4s ease-in-out;
+              -moz-transition:all .4s ease-in-out;
+              -ms-transition:all .4s ease-in-out;
+              -o-transition:all .4s ease-in-out;
+              transition:all .4s ease-in-out;*/
+            }
+ 
+/* span:target */
+         /* #tab-1:none,
+            #tab-2:none,
+            #tab-3:none,
+            #tab-4:none,
+            #tab-5:none
+            {
+              border: solid 1px red;
+            }*/
+ 
+/*第一筆的底色*/
+            span:target ~ 
+            #tab > ul li:first-child a     /*first-of-type*/
+            {
+              background:#1caa5d;
+            }
+            span:target ~ #tab > div:first-of-type 
+            {
+              visibility:hidden;
+              height:0;
+              padding:0 15px;
+            }
+ 
+/*頁籤變換&第一筆*/
+            span ~ #tab > ul li:first-child a,
+            #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+            #tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+            #tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+            #tab-4:target ~ #tab > ul li a[href$="#tab-4"],
+            #tab-5:target ~ #tab > ul li a[href$="#tab-5"]
+            {
+              background: #fff;
+            }
+ 
+/*頁籤內容顯示&第一筆*/
+            span ~ #tab > div:first-of-type,
+            #tab-1:target ~ #tab > div.tab-content-1,
+            #tab-2:target ~ #tab > div.tab-content-2,
+            #tab-3:target ~ #tab > div.tab-content-3,
+            #tab-4:target ~ #tab > div.tab-content-4,
+            #tab-5:target ~ #tab > div.tab-content-5
+            {
+              visibility:visible;
+              height:150px;
+              background: #fff;
+            }
+        
+            
+            #tab1
+            {
+                 width: 1000px;
+                 background: #1caa5d;
+                 border: solid 1px #1caa5d;
+                 margin-top:20px;
+                 margin-left:300px; 
+            }
+             #tab1>ul
+            {
+                 overflow: hidden;
+                 margin: 0;
+                 padding: 10px 20px 0 20px;
+            }
+            #tab1>ul>li
+            {
+                list-style-type: none;
+            }
+            #tab1>ul>li>a
+            {
+                text-decoration: none;
+                font-size: 25px;
+                color: #333;
+                float: left;
+                padding: 10px 40px;
+                margin-left: 5px;
+            }
+ 
+/*頁籤div內容*/#tab1>div 
+            {
+              clear:both;
+              padding:0 20px;
+              height:0;
+              overflow:hidden;
+              visibility:hidden;
+            }
+/*第一筆的底色*/
+            span:target ~ 
+            #tab1 > ul li:first-child a     /*first-of-type*/
+            {
+              background:#1caa5d;
+            }
+            span:target ~ #tab1 > div:first-of-type 
+            {
+              visibility:hidden;
+              height:0;
+              padding:0 15px;
+            }
+            span ~ #tab1 > ul li:first-child a,
+            #tab-6:target ~ #tab1 > ul li a[href$="#tab-6"],
+            #tab-7:target ~ #tab1 > ul li a[href$="#tab-7"],
+            #tab-8:target ~ #tab1 > ul li a[href$="#tab-8"],
+            #tab-9:target ~ #tab1 > ul li a[href$="#tab-9"],
+            #tab-10:target ~ #tab1 > ul li a[href$="#tab-10"]
+            {
+              background: #fff;
+            }
+            span ~ #tab1 > div:first-of-type,
+            #tab-6:target ~ #tab1 > div.tab-content-6,
+            #tab-7:target ~ #tab1 > div.tab-content-7,
+            #tab-8:target ~ #tab1 > div.tab-content-8,
+            #tab-9:target ~ #tab1 > div.tab-content-9,
+            #tab-10:target ~ #tab1 > div.tab-content-10
+            {
+              visibility:visible;
+              height:150px;
+              background: #fff;
+            }
+            
+            
+            #tab2
+            {
+                 width: 1000px;
+                 background: #1caa5d;
+                 border: solid 1px #1caa5d;
+                 margin-top:20px;
+                 margin-left:300px; 
+            }
+             #tab2>ul
+            {
+                 overflow: hidden;
+                 margin: 0;
+                 padding: 10px 20px 0 20px;
+            }
+            #tab2>ul>li
+            {
+                list-style-type: none;
+            }
+            #tab2>ul>li>a
+            {
+                text-decoration: none;
+                font-size: 25px;
+                color: #333;
+                float: left;
+                padding: 10px 40px;
+                margin-left: 5px;
+            }
+ 
+/*頁籤div內容*/#tab2>div 
+            {
+              clear:both;
+              padding:0 20px;
+              height:0;
+              overflow:hidden;
+              visibility:hidden;
+            }
+/*第一筆的底色*/
+            span:target ~ 
+            #tab2 > ul li:first-child a     /*first-of-type*/
+            {
+              background:#1caa5d;
+            }
+            span:target ~ #tab2 > div:first-of-type 
+            {
+              visibility:hidden;
+              height:0;
+              padding:0 15px;
+            }
+            span ~ #tab2 > ul li:first-child a,
+            #tab-11:target ~ #tab2 > ul li a[href$="#tab-11"],
+            #tab-12:target ~ #tab2 > ul li a[href$="#tab-12"],
+            #tab-13:target ~ #tab2 > ul li a[href$="#tab-13"],
+            #tab-14:target ~ #tab2 > ul li a[href$="#tab-14"],
+            #tab-15:target ~ #tab2 > ul li a[href$="#tab-15"]
+            {
+              background: #fff;
+            }
+            span ~ #tab2 > div:first-of-type,
+            #tab-11:target ~ #tab2 > div.tab-content-11,
+            #tab-12:target ~ #tab2 > div.tab-content-12,
+            #tab-13:target ~ #tab2 > div.tab-content-13,
+            #tab-14:target ~ #tab2 > div.tab-content-14,
+            #tab-15:target ~ #tab2 > div.tab-content-15
+            {
+              visibility:visible;
+              height:150px;
+              background: #fff;
+            }
+            
+            
+        </style>
+    </head>
+    
+    <body>
+       <div class="logo">
+            <img src="logo.jpg">
+        </div>
+        <div class="ActivityPromotion">
+            <p>活動優惠</p>
+        </div>
+        <div class="membershopsearch">
+            <div class="signin">
+                <p>登入會員</p>
+            </div>
+            <div class="register">
+                <p>加入會員</p>
+            </div>
+        </div>
+        
+        <div class="centerlong">
+                <a href="">Home</a>
+                <a href="">活動優惠</a>
+                <a href="">商店資訊</a>
+                <a href="">商品集</a>
+                <a href="">會員中心</a>
+        </div>
+        
+        <div class="product">
+            <p>商品集</p>
+          <div class="a1">
+              <p>上衣</p>
+          </div>
+          <div class="a2">
+              <p>褲子</p>
+          </div>
+          <div class="a3">
+              <p>裙子</p>
+          </div>
+          <div class="a4">
+              <p>洋裝</p>
+          </div>    
+          <div class="a5">
+              <p>配件</p>
+          </div>   
+       </div>
+        
+       
+        <span id="tab-1"></span>
+        <span id="tab-2"></span>
+        <span id="tab-3"></span>
+        <span id="tab-4"></span>
+        <span id="tab-5"></span>
+ 
+        <div id="tab">
+        <!-- 頁籤按鈕 -->
+        <ul>
+          <li><a type="text">限時優惠</a></li>
+          <li><a href="#tab-1">上衣</a></li>
+          <li><a href="#tab-2">褲子</a></li>
+          <li><a href="#tab-3">裙子</a></li>
+          <li><a href="#tab-4">洋裝</a></li>
+          <li><a href="#tab-5">配件</a></li>
+        </ul>
+        <!-- 頁籤的內容區塊 -->
+        <div class="tab-content-1"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-2"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-3"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-4"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-5"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        </div>
+        
+        <span id="tab-6"></span>
+        <span id="tab-7"></span>
+        <span id="tab-8"></span>
+        <span id="tab-9"></span>
+        <span id="tab-10"></span>
+ 
+        <div id="tab1">
+        <!-- 頁籤按鈕 -->
+        <ul>
+          <li><a>本周精選</a></li>
+          <li><a href="#tab-6">上衣</a></li>
+          <li><a href="#tab-7">褲子</a></li>
+          <li><a href="#tab-8">裙子</a></li>
+          <li><a href="#tab-9">洋裝</a></li>
+          <li><a href="#tab-10">配件</a></li>
+        </ul>
+        <!-- 頁籤的內容區塊 -->
+        <div class="tab-content-6"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-7"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-8"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-9"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-10"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        </div>
+        
+        <span id="tab-11"></span>
+        <span id="tab-12"></span>
+        <span id="tab-13"></span>
+        <span id="tab-14"></span>
+        <span id="tab-15"></span>
+ 
+        <div id="tab2">
+        <!-- 頁籤按鈕 -->
+        <ul>
+          <li><a>本月新品</a></li>
+          <li><a href="#tab-11">上衣</a></li>
+          <li><a href="#tab-12">褲子</a></li>
+          <li><a href="#tab-13">裙子</a></li>
+          <li><a href="#tab-14">洋裝</a></li>
+          <li><a href="#tab-15">配件</a></li>
+        </ul>
+        <!-- 頁籤的內容區塊 -->
+        <div class="tab-content-11"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-12"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-13"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-14"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        <div class="tab-content-15"><p><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"><img src="logo.jpg"></p></div>
+        </div>
+        
+    </body>
+</html>
